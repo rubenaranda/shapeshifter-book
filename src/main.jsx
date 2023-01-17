@@ -6,9 +6,9 @@ import { ThemeProvider } from '@emotion/react'
 import { testTheme } from './styles/index'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <>
     <ThemeProvider theme={testTheme}>
       <App />
     </ThemeProvider>
-  </React.StrictMode>
+  </>
 )

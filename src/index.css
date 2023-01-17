@@ -1,5 +1,6 @@
 body{
-  background-image: url(D:\Clase\shapeshifter-book\src\assets\citation-background.png);
+  background-image: url(src/assets/body_background.jpg);
   background-repeat: no-repeat;
-  background-size:cover
+  background-size:cover;
+  min-width: 350px;
 }
