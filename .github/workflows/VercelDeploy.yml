@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Tests
-        run: npm run test
+        run: npm run test --if-present
   Deploy-Production:
     if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
