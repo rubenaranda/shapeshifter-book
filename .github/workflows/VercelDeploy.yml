@@ -18,7 +18,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Run Tests
-        run: npm run test --if-present
+        run: npm run test
   Deploy-Production:
     if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
