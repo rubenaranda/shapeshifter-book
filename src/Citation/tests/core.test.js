@@ -1,6 +1,6 @@
 
 test(
   'shoudl be true', () => {
-    return true
+    expect(true).toBe(true)
   }
 )
