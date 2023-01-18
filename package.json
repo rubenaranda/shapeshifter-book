@@ -46,5 +46,5 @@
     "testMatch": [
       "**/*.test.js"
     ]
- }
+  }
 }
