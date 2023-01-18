@@ -5,11 +5,10 @@ env:
 on:
   push:
     branches:
-      - main
-      - walid
+      - master
   pull_request:
     branches:
-      - main
+      - master
 jobs:
   Tests:
     runs-on: ubuntu-latest
