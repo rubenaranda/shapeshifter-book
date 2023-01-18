@@ -6,8 +6,8 @@ const API_URL = 'https://www.googleapis.com/books/v1/volumes';
 
 function Books() {
   const [books, setBooks] = useState([]);
-  const [author,setAuthor] = useState(['jk rowling'])
-  const [query, setQuery] = useState('harry potter y la camara secreta');
+  const [author,setAuthor] = useState(['william'])
+  const [query, setQuery] = useState('romeo y julieta');
 
   useEffect(() => {
     const fetchData = async () => {

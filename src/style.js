@@ -39,5 +39,6 @@ width: 30%;
 
 export const BookImage = styled.p`
 ${withTheme('margin-left', 'sizes.55')}
+height: 100px;
 
 `
