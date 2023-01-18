@@ -1,18 +1,19 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+//import { useState, useEffect } from 'react'
 
-const baseURL = "https://www.googleapis.com/books/v1/volumes?q=harry";
+const API_URL = "https://www.googleapis.com/books/v1/volumes";
 
-const getBook = (baseURL) => {
-  const [book, setBook] = useState(null)
 
-  useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setBook(response.data)
-    })
-  }, [])
-
-  return book
+const searchBooks = (query) => {
+  return axios.get(`${API_URL}?q=${query}`);
 }
 
-export default getBook
+searchBooks('harry')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+export default searchBooks
