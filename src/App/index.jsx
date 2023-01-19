@@ -1,4 +1,4 @@
-import ShapeshifterBookApp from '../CitationDisplayer'
+import ShapeshifterBookApp from '../ShapeshifterBook'
 import { useState } from 'react'
 
 const App = () => {

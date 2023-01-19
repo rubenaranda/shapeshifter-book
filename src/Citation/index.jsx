@@ -18,11 +18,8 @@ const CitationData = ({ setBookData }) => {
 }
 
 const getBookData = (apiData, setBookData) => {
-  console.log(typeof setBookData)
-  console.log('hola')
   const author = apiData.author
   const book = apiData.book
-  console.log(author, book)
   setBookData([author, book])
 }
 
