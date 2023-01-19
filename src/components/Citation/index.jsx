@@ -7,6 +7,7 @@ const baseURL = 'https://cors-anywhere.herokuapp.com/https://api.hamatim.com/quo
 const CitationData = ({ setBookData }) => {
   const [isLoading, setIsLoading] = useState(true)
   const apiData = GetCitationData(baseURL, setIsLoading)
+  console.log(apiData)
 
   if (isLoading === false) {
     return (
@@ -20,7 +21,7 @@ const CitationData = ({ setBookData }) => {
 const getBookData = (apiData, setBookData) => {
   const author = apiData.author
   const book = apiData.book
-  setBookData([author, book])
+  setBookData({ author, book })
 }
 
 export default CitationData
