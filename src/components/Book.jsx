@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Title, Author, Info, Description, BookImage, LeftPage } from '../style'
+import { Title, Author, Info, Description, BookImage, LeftPage, NoResult, ReturnButton } from '../style'
 
 const API_URL = 'https://www.googleapis.com/books/v1/volumes';
 
 function Books() {
   const [books, setBooks] = useState([]);
-  const [author,setAuthor] = useState(['william'])
-  const [query, setQuery] = useState('romeo y julieta');
+  const [author,setAuthor] = useState(['jk rowling'])
+  const [query, setQuery] = useState('harry potter');
 
   useEffect(() => {
-    const fetchData = async () => {
+    const data = async () => {
       const result = await axios.get(`${API_URL}?q=${query}+inauthor:${author}`);
       console.log(result.data.items[0]);
       setBooks(result.data.items[0]);
     };
-    fetchData();
+    data();
   }, [query]);
 
   return (
@@ -32,7 +32,10 @@ function Books() {
           <Description>{books.volumeInfo.description}</Description>
         </div>
       ) : (
-        <p>No results found</p>
+        <div>
+        <NoResult>No results found</NoResult>
+        <ReturnButton><button>Volver</button></ReturnButton>
+        </div>
       )}
       </ul>
     </div>
