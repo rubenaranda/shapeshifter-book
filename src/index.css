@@ -1,6 +1,3 @@
 body{
-  background-image: url(src/assets/body_background.jpg);
-  background-repeat: no-repeat;
-  background-size:cover;
-  min-width: 350px;
-}
+  margin: 0;
+  }

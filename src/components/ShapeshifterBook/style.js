@@ -1,12 +1,21 @@
 import styled from '@emotion/styled'
-import { withTheme } from '../helpers/styles.helper'
-import background from '../assets/background-div.png'
+import { withTheme } from '../../helpers/styles.helper'
+import background from '../../assets/background-div.png'
+import bodyBackground from '../../assets/body_background.jpg'
 
+export const BackgroundBody = styled.div`
+background-image: url(${bodyBackground});
+background-repeat: no-repeat;
+background-size:cover;
+width: 100%;
+height: 100vh;
+padding-top: 4%;
+min-width: 350px;
+`
 export const Frame = styled.div`
 ${withTheme('font-family', 'fonts.body')}
 ${withTheme('margin-left', 'sizes.25')}
 ${withTheme('margin-right', 'sizes.25')}
-margin-top: 4%;
 margin-bottom: 5%;
 padding-bottom: 10%;
 background-image: url(${background});
