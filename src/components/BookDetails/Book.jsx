@@ -4,7 +4,7 @@ import { Title, Author, Info, Description, BookImage, LeftPage, NoResult, Return
 
 const API_URL = 'https://www.googleapis.com/books/v1/volumes'
 
-function Books ({ BookData }) {
+function Books ({ BookData, setBookData }) {
   const [isLoading, setIsLoading] = useState(true)
   const [books, setBooks] = useState(null)
   const [author, setAuthor] = useState(null)
@@ -26,7 +26,12 @@ function Books ({ BookData }) {
 
   return (
     isLoading
-      ? <div>No cargas</div>
+      ? <div>
+        <BackgroundBody>
+        <NoResult>No carga, selecciona otra citacion</NoResult>
+      <ReturnButton><button onClick={() => setBookData(null)}>Volver</button></ReturnButton>
+      </BackgroundBody>
+      </div>
       : <BackgroundBody>
         <ul>
           {books.volumeInfo
@@ -39,12 +44,13 @@ function Books ({ BookData }) {
                   <Info>This book has {books.volumeInfo.pageCount} pages and its categorie is {books.volumeInfo.categories}</Info>
                 </LeftPage>
                 <Description>{books.volumeInfo.description}</Description>
+                <ReturnButton><button onClick={() => setBookData(null)}>Volver</button></ReturnButton>
               </div>
               )
             : (
               <div>
                 <NoResult>No results found</NoResult>
-                <ReturnButton><button>Volver</button></ReturnButton>
+                <ReturnButton><button onClick={() => setBookData(null)}>Volver</button></ReturnButton>
               </div>
               )}
         </ul>
