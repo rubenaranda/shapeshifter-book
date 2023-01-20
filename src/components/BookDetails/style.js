@@ -1,5 +1,19 @@
 import styled from '@emotion/styled'
 import { withTheme } from '../../helpers/styles.helper'
+import bodyBackground from '../../assets/books_background.png'
+
+export const BackgroundBody = styled.div`
+background-image: url(${bodyBackground});
+background-repeat: no-repeat;
+background-size:cover;
+width: 100%;
+height: 100vh;
+background-repeat: no-repeat;
+background-size: 100% 107%;
+background-attachment: fixed; 
+position: sticky;
+overflow: hidden;
+`
 
 export const Title = styled.h1`
 ${withTheme('font-family', 'fonts.title')}
