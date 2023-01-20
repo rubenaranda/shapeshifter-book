@@ -1,8 +1,3 @@
 body{
-    background-image: url(./assets/books_background.png);
-    background-repeat: no-repeat;
-    background-size: 100% 107%;
-    background-attachment: fixed; 
-    position: sticky;
-    overflow: hidden;
+  margin: 0;
   }
