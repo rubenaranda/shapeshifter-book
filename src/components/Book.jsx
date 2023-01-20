@@ -43,6 +43,7 @@ function Books ({ BookData, setBookData }) {
                   <Info>This book has {books.volumeInfo.pageCount} pages and its categorie is {books.volumeInfo.categories}</Info>
                 </LeftPage>
                 <Description>{books.volumeInfo.description}</Description>
+                <ReturnButton><button onClick={() => setBookData(null)}>Volver</button></ReturnButton>
               </div>
               )
             : (
