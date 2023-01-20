@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { withTheme } from './helpers/styles.helper'
+import { withTheme } from '../../helpers/styles.helper'
 
 export const Title = styled.h1`
 ${withTheme('font-family', 'fonts.title')}

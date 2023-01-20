@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import CitationData from '..'
 
 test('The component Citation should render with mocked api data', () => {
@@ -12,8 +12,4 @@ test('The component Citation should render with mocked api data', () => {
   }
 
   render(<CitationData apiData={apiData} />)
-})
-
-test('The component should show the text of the api data', () => {
-
 })

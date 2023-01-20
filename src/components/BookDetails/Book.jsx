@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Title, Author, Info, Description, BookImage, LeftPage, NoResult, ReturnButton } from '../style'
+import { Title, Author, Info, Description, BookImage, LeftPage, NoResult, ReturnButton } from './style'
 
 const API_URL = 'https://www.googleapis.com/books/v1/volumes'
 
