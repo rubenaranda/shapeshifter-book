@@ -3,6 +3,7 @@ import CitationData from '../Citation'
 import Button from '../GenericButton/index'
 import webIcon from '../../assets/web-icon.png'
 import { useState } from 'react'
+
 const ShapeshifterBookApp = ({ setBookData }) => {
   const [reroll, setReroll] = useState(1)
   console.log(typeof setBookData)
