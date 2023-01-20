@@ -12,20 +12,21 @@ width: 100%;
 export const Author = styled.p`
 ${withTheme('font-family', 'fonts.body')}
 ${withTheme('font-size', 'sizes.rem2')}
+font-weight: bold;
 
 `
 
 export const Info = styled.p`
 ${withTheme('font-family', 'fonts.body')}
 ${withTheme('font-size', 'sizes.rem2')}
-
+font-weight: bold;
 `
 
 export const Description = styled.p`
 ${withTheme('font-family', 'fonts.body')}
 ${withTheme('font-size', 'sizes.rem1')}
 ${withTheme('margin-right', 'sizes.20')}
-${withTheme('margin-top', 'sizes.negative')}
+${withTheme('margin-top', 'sizes.5')}
 float: right;
 font-weight: bold;
 width: 25%;
@@ -48,6 +49,7 @@ ${withTheme('margin-left', 'sizes.20')}
 ${withTheme('margin-top', 'sizes.20')}
 ${withTheme('font-family', 'fonts.body')}
 ${withTheme('font-size', 'sizes.rem2')}
+font-weight: bold;
 `
 
 export const ReturnButton = styled.p`

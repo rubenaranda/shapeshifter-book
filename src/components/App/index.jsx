@@ -7,7 +7,7 @@ const App = () => {
   console.log(bookData)
   return (
     <div>
-      {bookData != null ? <Books BookData={bookData} /> : <ShapeshifterBookApp setBookData={setBookData} />}
+      {bookData != null ? <Books BookData={bookData} setBookData={setBookData} /> : <ShapeshifterBookApp setBookData={setBookData} />}
     </div>
   )
 }
