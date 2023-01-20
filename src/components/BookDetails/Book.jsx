@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Title, Author, Info, Description, BookImage, LeftPage, NoResult, ReturnButton } from '../style'
-import ShapeshifterBookApp from './ShapeshifterBook/index.jsx'
+import { Title, Author, Info, Description, BookImage, LeftPage, NoResult, ReturnButton, BackgroundBody } from './style'
 
 const API_URL = 'https://www.googleapis.com/books/v1/volumes'
 
-function Books ({ BookData, setBookData }) {
+function Books ({ BookData }) {
   const [isLoading, setIsLoading] = useState(true)
   const [books, setBooks] = useState(null)
   const [author, setAuthor] = useState(null)
@@ -27,11 +26,8 @@ function Books ({ BookData, setBookData }) {
 
   return (
     isLoading
-      ? <div>
-        <NoResult>No carga, selecciona otra citacion</NoResult>
-        <ReturnButton><button onClick={() => setBookData(null)}>Volver</button></ReturnButton>
-        </div>
-      : <div>
+      ? <div>No cargas</div>
+      : <BackgroundBody>
         <ul>
           {books.volumeInfo
             ? (
@@ -43,7 +39,6 @@ function Books ({ BookData, setBookData }) {
                   <Info>This book has {books.volumeInfo.pageCount} pages and its categorie is {books.volumeInfo.categories}</Info>
                 </LeftPage>
                 <Description>{books.volumeInfo.description}</Description>
-                <ReturnButton><button onClick={() => setBookData(null)}>Volver</button></ReturnButton>
               </div>
               )
             : (
@@ -53,7 +48,7 @@ function Books ({ BookData, setBookData }) {
               </div>
               )}
         </ul>
-      </div>
+      </BackgroundBody>
   )
 }
 

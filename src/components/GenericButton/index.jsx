@@ -3,7 +3,7 @@ import React from 'react'
 import { ButtonPosition } from './style'
 
 const Button = ({ text, onClick }) => (
-  <ButtonPosition onClick={onClick}>
+  <ButtonPosition data-testid='shapeshifter-buton' onClick={onClick}>
     {text}
   </ButtonPosition>
 )

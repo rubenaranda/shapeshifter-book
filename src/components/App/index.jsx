@@ -1,5 +1,5 @@
 import ShapeshifterBookApp from '../ShapeshifterBook'
-import Books from '../Book'
+import Books from '../BookDetails/Book'
 import { useState } from 'react'
 
 const App = () => {
