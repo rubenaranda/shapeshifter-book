@@ -20,8 +20,10 @@
     "@testing-library/user-event": "^14.4.3",
     "axios": "^1.2.2",
     "emotion": "^11.0.0",
+    "freezeframe": "^5.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-freezeframe": "^5.0.2",
     "react-router-dom": "^6.6.2",
     "react-scripts": "^5.0.1",
     "yarn": "^1.22.19"
@@ -47,7 +49,7 @@
   "jest": {
     "testMatch": [
       "**/*.test.js"
-    ],   
+    ],
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
     },

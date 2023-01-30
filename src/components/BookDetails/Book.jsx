@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Title, Author, Info, Description, BookImage, LeftPage, NoResult, ReturnButton, BackgroundBody } from './style'
-
 const API_URL = 'https://www.googleapis.com/books/v1/volumes'
 
 function Books ({ BookData, setBookData }) {
@@ -28,10 +27,10 @@ function Books ({ BookData, setBookData }) {
     isLoading
       ? <div>
         <BackgroundBody>
-        <NoResult>No carga, selecciona otra citacion</NoResult>
-      <ReturnButton><button onClick={() => setBookData(null)}>Volver</button></ReturnButton>
-      </BackgroundBody>
-      </div>
+          <NoResult>No carga, selecciona otra citacion</NoResult>
+          <ReturnButton><button onClick={() => setBookData(null)}>Volver</button></ReturnButton>
+        </BackgroundBody>
+        </div>
       : <BackgroundBody>
         <ul>
           {books.volumeInfo
@@ -54,7 +53,7 @@ function Books ({ BookData, setBookData }) {
               </div>
               )}
         </ul>
-      </BackgroundBody>
+        </BackgroundBody>
   )
 }
 
